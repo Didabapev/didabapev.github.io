@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profit Calculator | Smart Finance Tools</title>
+  <meta name="description" content="Free online profit calculator. Calculate business profit instantly.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="font-family:Arial; max-width:700px; margin:auto; padding:20px;">
+
+<nav style="margin-bottom:20px;">
+  <a href="/ROI-Calculator/">Home</a> |
+  <a href="/ROI-Calculator/profit-calculator.html">Profit</a>
+</nav>
+
+<hr>
+
+<h1>Profit Calculator</h1>
+
+<p>Use this free calculator to determine your business profit.</p>
+
+<label>Total Revenue ($):</label><br>
+<input type="number" id="revenue"><br><br>
+
+<label>Total Costs ($):</label><br>
+<input type="number" id="cost"><br><br>
+
+<button onclick="calculateProfit()" style="padding:8px 15px;">
+  Calculate Profit
+</button>
+
+<h2 id="result" style="margin-top:20px;"></h2>
+
+<script>
+function calculateProfit() {
+  var revenue = parseFloat(document.getElementById("revenue").value);
+  var cost = parseFloat(document.getElementById("cost").value);
+
+  if (!isNaN(revenue) && !isNaN(cost)) {
+    var profit = revenue - cost;
+    document.getElementById("result").innerHTML =
+      "Net Profit: $" + profit.toFixed(2);
+  } else {
+    document.getElementById("result").innerHTML =
+      "Please enter valid numbers.";
+  }
+}
+</script>
+
+<hr>
+
+<h2>What is Profit?</h2>
+<p>Profit is the amount of money a business earns after subtracting all costs from total revenue.
+The formula is:</p>
+
+<p><strong>Profit = Revenue - Costs</strong></p>
+
+<p>Tracking profit helps businesses understand financial performance and sustainability.</p>
+
+</body>
+</html>
 
