@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Break-even Calculator | Smart Finance Tools</title>
+  <meta name="description" content="Free break-even calculator for businesses. Calculate your break-even point instantly.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="font-family:Arial; max-width:700px; margin:auto; padding:20px;">
+
+<nav style="margin-bottom:20px;">
+  <a href="/ROI-Calculator/">Home</a> |
+  <a href="/ROI-Calculator/profit-calculator.html">Profit</a> |
+  <a href="/ROI-Calculator/break-even-calculator.html">Break-even</a>
+</nav>
+
+<hr>
+
+<h1>Break-even Calculator</h1>
+
+<p>Calculate how many units you need to sell to break even.</p>
+
+<label>Fixed Costs ($):</label><br>
+<input type="number" id="fixed"><br><br>
+
+<label>Price per Unit ($):</label><br>
+<input type="number" id="price"><br><br>
+
+<label>Variable Cost per Unit ($):</label><br>
+<input type="number" id="variable"><br><br>
+
+<button onclick="calculateBE()" style="padding:8px 15px;">
+  Calculate Break-even
+</button>
+
+<h2 id="result" style="margin-top:20px;"></h2>
+
+<script>
+function calculateBE() {
+  var fixed = parseFloat(document.getElementById("fixed").value);
+  var price = parseFloat(document.getElementById("price").value);
+  var variable = parseFloat(document.getElementById("variable").value);
+
+  if (price > variable) {
+    var breakeven = fixed / (price - variable);
+    document.getElementById("result").innerHTML =
+      "Break-even Point: " + breakeven.toFixed(0) + " units";
+  } else {
+    document.getElementById("result").innerHTML =
+      "Price must be greater than variable cost.";
+  }
+}
+</script>
+
+<hr>
+
+<h2>What is Break-even Point?</h2>
+<p>The break-even point is when total revenue equals total costs.
+It shows how many units you must sell to avoid losses.</p>
+
+</body>
+</html>
 
