@@ -126,3 +126,23 @@ a:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(0, 255, 136, 0.5);
 }
+/* ===== MAIN CTA BUTTON ===== */
+
+.cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #00ff88, #00ccff);
+    color: #0f172a;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 16px;
+    text-decoration: none;
+    box-shadow: 0 12px 40px rgba(0, 255, 136, 0.45);
+    transition: 0.3s ease;
+}
+
+.cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 55px rgba(0, 255, 136, 0.6);
+}
