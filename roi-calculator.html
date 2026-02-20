@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROI Calculator – Calculate Return on Investment Online</title>
+<meta name="description" content="Free ROI Calculator. Calculate return on investment instantly for business, marketing, and real estate. Simple and accurate.">
+<meta name="keywords" content="ROI calculator, return on investment calculator, business ROI tool">
+<link rel="stylesheet" href="style.css">
+
+<!-- Open Graph -->
+<meta property="og:title" content="ROI Calculator">
+<meta property="og:description" content="Free online ROI calculator for businesses and investors.">
+<meta property="og:type" content="website">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "ROI Calculator",
+ "applicationCategory": "FinanceApplication"
+}
+</script>
+</head>
+<body>
+
+<header>
+<h1>ROI Calculator</h1>
+<p>Calculate your Return on Investment instantly</p>
+</header>
+
+<div class="calculator">
+<label>Investment Amount ($)</label>
+<input type="number" id="investment">
+
+<label>Return Amount ($)</label>
+<input type="number" id="return">
+
+<button onclick="calculateROI()">Calculate ROI</button>
+
+<h2 id="roiResult"></h2>
+</div>
+
+<script>
+function calculateROI() {
+let investment = parseFloat(document.getElementById('investment').value);
+let returnAmount = parseFloat(document.getElementById('return').value);
+
+if (!investment || !returnAmount) {
+document.getElementById('roiResult').innerText = "Please enter valid numbers.";
+return;
+}
+
+let roi = ((returnAmount - investment) / investment) * 100;
+document.getElementById('roiResult').innerText = "ROI: " + roi.toFixed(2) + "%";
+}
+</script>
+
+</body>
+</html>
 
