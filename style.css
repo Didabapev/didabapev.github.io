@@ -146,3 +146,27 @@ a:hover {
     transform: translateY(-3px);
     box-shadow: 0 18px 55px rgba(0, 255, 136, 0.6);
 }
+/* ===== SEO TEXT BLOCK ===== */
+
+.seo-text {
+    max-width: 900px;
+    margin: 80px auto 40px;
+    color: #cbd5e1;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.seo-text h2 {
+    color: #ffffff;
+    margin-top: 30px;
+    font-size: 22px;
+}
+
+.seo-text ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.seo-text li {
+    margin-bottom: 8px;
+}
