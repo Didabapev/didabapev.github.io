@@ -103,3 +103,22 @@ a {
 a:hover {
     color: #00ff88;
 }
+/* ===== PREMIUM BUTTON STYLE ===== */
+
+.button {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 8px 6px 8px 0;
+    background: linear-gradient(135deg, #00ff88, #00ccff);
+    color: #0f172a;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 255, 136, 0.3);
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 255, 136, 0.5);
+}
